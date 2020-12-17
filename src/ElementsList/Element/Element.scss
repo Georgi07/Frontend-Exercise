@@ -1,29 +1,36 @@
 $lowRatingColor: #e89d40;
 @mixin message-field {
     color: #ffffff;
-    padding: 8px;
-    margin: 5px;
+    width: 100px;
+    text-align: center;
+    padding: 3px 10px;
     border-radius: 8px;
+    position: absolute;
+    right: 10px;
+    top: -8px;
+    font-size: 10px;
 }
 .Element {
-      width: 50%;
-      margin: 10px auto;
+      width: 60%;
+      margin: 25px auto;
       background-color: #ffffff;
+      display: flex;
+      position: relative;
+      padding: 10px;
       border-radius: 8px;
-     
+      .HighRatingMessage {
+        background-color: #27aae1;
+        @include message-field;
+    }
+    .LowRatingMessage {
+        background-color: $lowRatingColor;
+       @include message-field;
+    }
      .Data {
          width: 20%;
-         float: right;
-         .HighRatingMessage {
-            background-color: #27aae1;
-            @include message-field;
-        }
-        .LowRatingMessage {
-            background-color: $lowRatingColor;
-           @include message-field;
-        }
+        //  float: right;
          .DataInfo {
-             margin-top: 8px;
+             margin: 10px;
              font-size: 10px;
          }
      }
@@ -44,3 +51,11 @@ $lowRatingColor: #e89d40;
         font-size: 12px; 
     }
 }
+@media (min-width: 320px) and (max-width: 768px) {
+  .Element {
+      width: 90%;
+  }
+}
+@media (max-width: 320px) {
+    
+  }

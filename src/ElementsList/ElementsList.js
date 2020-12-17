@@ -10,11 +10,12 @@ function ElementsList() {
      return (
         <div className="ElementsList">
           {
-             dataParsed.map(thread => {
+             dataParsed.map((thread, index) => {
                 threadElements = thread[1];
                 threadFirstElement = threadElements[0];
                return (
-                   <Element team={threadFirstElement.team} 
+                   <Element key={index}
+                            team={threadFirstElement.team} 
                              created_at={threadFirstElement.created_at}
                              subject={threadFirstElement.subject}
                              question={threadFirstElement.question}
