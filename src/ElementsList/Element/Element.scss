@@ -1,14 +1,14 @@
 $lowRatingColor: #e89d40;
 @mixin message-field {
-    color: #ffffff;
     width: 100px;
     text-align: center;
+    color: #ffffff;
+    font-size: 10px;
     padding: 3px 10px;
     border-radius: 8px;
     position: absolute;
     right: 10px;
     top: -8px;
-    font-size: 10px;
 }
 .Element {
       width: 60%;
@@ -28,7 +28,6 @@ $lowRatingColor: #e89d40;
     }
      .Data {
          width: 20%;
-        //  float: right;
          .DataInfo {
              margin: 10px;
              font-size: 10px;
