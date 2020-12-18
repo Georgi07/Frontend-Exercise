@@ -27,14 +27,14 @@ $lowRatingColor: #e89d40;
        @include message-field;
     }
      .Data {
-         width: 20%;
+         width: 25%;
          .DataInfo {
              margin: 10px;
              font-size: 10px;
          }
      }
      .Description {
-        width: 80%;
+        width: 75%;
         padding: 3px;
         .HighRatingSubject {
             color: #9335ff;
@@ -53,8 +53,26 @@ $lowRatingColor: #e89d40;
 @media (min-width: 320px) and (max-width: 768px) {
   .Element {
       width: 90%;
+      .Data {
+        width: 25%;
+        .DataInfo {
+            margin: 10px 20px;
+        }
+    }
+    .Description {
+        width: 75%;
+    }
   }
 }
 @media (max-width: 320px) {
-    
+    .Element {
+        width: 300px;
+        height: 100px;
+        .Data {
+            width: 35%;
+        }
+        .Description {
+            width: 65%;
+        }
+    }
   }
